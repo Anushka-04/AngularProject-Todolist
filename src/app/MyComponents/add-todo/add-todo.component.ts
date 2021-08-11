@@ -9,7 +9,8 @@ import { Todo } from 'src/app/Todo';
 export class AddTodoComponent implements OnInit {
 	
 	title: string;
-	desc: string;
+	day: string;
+  active:boolean=false;
     @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
 
   constructor() { }
@@ -21,10 +22,14 @@ export class AddTodoComponent implements OnInit {
   	const todo = {
   	 sno : 8,
   	 title : this.title,
-  	 desc : this.desc,
+  	 day : this.day,
   	 active : true
   	}
   	this.todoAdd.emit(todo);
+
+    this.title="";
+    this.day = "";
+    this.active = false;
   }
 
 }

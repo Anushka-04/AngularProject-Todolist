@@ -8,6 +8,7 @@ import { AddTodoComponent } from './MyComponents/add-todo/add-todo.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './MyComponents/about/about.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
